@@ -36,11 +36,7 @@ const buildDiff = (data1, data2) => {
     return result;
   }, []);
 
-  return [
-    '{',
-    ...lines,
-    '}',
-  ].join('\n');
+  return ['{', ...lines, '}'].join('\n');
 };
 
 const genDiff = (filepath1, filepath2) => {
