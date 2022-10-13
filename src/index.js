@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import process from 'process';
 import _ from 'lodash';
+import parse from './parsers.js';
 
 const getData = (filepath) => {
   const fullPath = path.resolve(process.cwd(), filepath);
@@ -9,15 +10,6 @@ const getData = (filepath) => {
 };
 
 const getExtension = (filepath) => path.extname(filepath).slice(1);
-
-const parse = (rawData, format) => {
-  switch (format) {
-    case 'json':
-      return JSON.parse(rawData);
-    default:
-      throw new Error(`Unknown format: '${format}'!`);
-  }
-};
 
 const buildDiff = (data1, data2) => {
   const keys1 = Object.keys(data1);
