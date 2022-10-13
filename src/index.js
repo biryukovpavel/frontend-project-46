@@ -18,21 +18,22 @@ const buildDiff = (data1, data2) => {
 
   const indent = '  ';
   const lines = sortedKeys.reduce((acc, key) => {
+    let result;
     if (!Object.hasOwn(data1, key)) {
-      return [...acc, `${indent}+ ${key}: ${data2[key]}`];
-    }
-    if (!Object.hasOwn(data2, key)) {
-      return [...acc, `${indent}- ${key}: ${data1[key]}`];
-    }
-    if (data1[key] !== data2[key]) {
-      return [
+      result = [...acc, `${indent}+ ${key}: ${data2[key]}`];
+    } else if (!Object.hasOwn(data2, key)) {
+      result = [...acc, `${indent}- ${key}: ${data1[key]}`];
+    } else if (data1[key] !== data2[key]) {
+      result = [
         ...acc,
         `${indent}- ${key}: ${data1[key]}`,
         `${indent}+ ${key}: ${data2[key]}`,
       ];
+    } else {
+      result = [...acc, `${indent}  ${key}: ${data1[key]}`];
     }
 
-    return [...acc, `${indent}  ${key}: ${data1[key]}`];
+    return result;
   }, []);
 
   return [
