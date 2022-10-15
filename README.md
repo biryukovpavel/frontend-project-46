@@ -15,3 +15,6 @@
 
 ### Плоский формат вывода
 [![asciicast](https://asciinema.org/a/53hgxXT5NcChrFT2w52ll69M6.svg)](https://asciinema.org/a/53hgxXT5NcChrFT2w52ll69M6)
+
+### Вывод в json
+[![asciicast](https://asciinema.org/a/Th5D4yJmhhSCSh8VUXqlhUAhP.svg)](https://asciinema.org/a/Th5D4yJmhhSCSh8VUXqlhUAhP)
