@@ -12,3 +12,6 @@
 
 ### Рекурсивное сравнение
 [![asciicast](https://asciinema.org/a/T9voEkw3CVlDBiSGckGayTekW.svg)](https://asciinema.org/a/T9voEkw3CVlDBiSGckGayTekW)
+
+### Плоский формат вывода
+[![asciicast](https://asciinema.org/a/53hgxXT5NcChrFT2w52ll69M6.svg)](https://asciinema.org/a/53hgxXT5NcChrFT2w52ll69M6)
