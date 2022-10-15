@@ -3,7 +3,7 @@ import path from 'path';
 import process from 'process';
 import _ from 'lodash';
 import parse from './parsers.js';
-import stylish from './stylish.js';
+import formatDiff from './formatters/index.js';
 
 const getData = (filepath) => {
   const fullPath = path.resolve(process.cwd(), filepath);
@@ -38,15 +38,6 @@ const buildDiff = (data1, data2) => {
 
     return { key, value: data1[key], status: 'unchanged' };
   });
-};
-
-const formatDiff = (data, format) => {
-  switch (format) {
-    case 'stylish':
-      return stylish(data);
-    default:
-      throw new Error(`Unknown formatter: '${format}'!`);
-  }
 };
 
 const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
