@@ -39,6 +39,18 @@ const testCases = [
     format: 'plain',
     expectedFile: 'expected_file_plain.txt',
   },
+  {
+    file1: 'file1.json',
+    file2: 'file2.json',
+    format: 'json',
+    expectedFile: 'expected_file_json.json',
+  },
+  {
+    file1: 'file1.yml',
+    file2: 'file2.yml',
+    format: 'json',
+    expectedFile: 'expected_file_json.json',
+  },
 ];
 
 test.each(testCases)('testing function genDiff($file1, $file2, $format)', ({
