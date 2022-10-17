@@ -25,7 +25,7 @@ const plain = (data) => {
         case 'nested':
           return iter(obj.children, [...keys, obj.key]);
         default:
-          throw new Error(`Unknown status: '${status}'!`);
+          throw new Error(`Unknown property status: '${status}'!`);
       }
     });
 

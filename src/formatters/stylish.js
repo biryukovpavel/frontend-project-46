@@ -41,7 +41,7 @@ const stylish = (data) => {
         case 'nested':
           return `${indent}  ${obj.key}: ${iter(obj.children, depth + 1)}`;
         default:
-          throw new Error(`Unknown status: '${status}'!`);
+          throw new Error(`Unknown property status: '${status}'!`);
       }
     });
 
