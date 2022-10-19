@@ -29,7 +29,7 @@ const plain = (data) => {
       }
     });
 
-    return lines.join('\n');
+    return lines.length === 0 ? lines : lines.join('\n');
   };
 
   return iter(data, []);
