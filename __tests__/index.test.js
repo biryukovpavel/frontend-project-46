@@ -32,11 +32,11 @@ describe.each(testCases)('testing function genDiff $format formatter', ({ format
 
   test('json files compare', () => {
     const actual = genDiff(getFixturePath('file1.json'), getFixturePath('file2.json'), format);
-    expect(actual).toEqual(expected);
+    expect(actual).toBe(expected);
   });
 
   test('yaml files compare', () => {
     const actual = genDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'), format);
-    expect(actual).toEqual(expected);
+    expect(actual).toBe(expected);
   });
 });
