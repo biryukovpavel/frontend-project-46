@@ -20,6 +20,9 @@
       - setting7: [1,2,4]
       + setting7: [1,2,3,4]
     }
+    group0: {
+        qwe: 123
+    }
     group1: {
       - baz: bas
       + baz: bars
