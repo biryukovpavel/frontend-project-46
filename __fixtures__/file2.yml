@@ -11,6 +11,11 @@ common:
     ops: vops
     doge:
       wow: so much
+  setting7:
+  - 1
+  - 2
+  - 3
+  - 4
 group1:
   foo: bar
   baz: bars

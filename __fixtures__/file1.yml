@@ -7,6 +7,10 @@ common:
     key: value
     doge:
       wow: ''
+  setting7:
+  - 1
+  - 2
+  - 4
 group1:
   baz: bas
   foo: bar
