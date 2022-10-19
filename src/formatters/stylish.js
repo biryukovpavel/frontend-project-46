@@ -4,6 +4,10 @@ const getIndent = (depth, replacer = ' ', count = 4) => replacer.repeat((depth +
 const getBracketIndent = (depth, replacer = ' ', count = 4) => replacer.repeat(depth * count);
 
 const stringify = (node, depth) => {
+  if (_.isArray(node)) {
+    return `[${node}]`;
+  }
+
   if (!_.isObject(node)) {
     return `${node}`;
   }

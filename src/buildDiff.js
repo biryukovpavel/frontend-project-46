@@ -6,7 +6,7 @@ const buildDiff = (data1, data2) => {
   const sortedKeys = _.sortBy(_.union(keys1, keys2));
 
   return sortedKeys.map((key) => {
-    if (_.isObject(data1[key]) && _.isObject(data2[key])) {
+    if (_.isPlainObject(data1[key]) && _.isPlainObject(data2[key])) {
       return { key, children: buildDiff(data1[key], data2[key]), status: 'nested' };
     }
     if (!Object.hasOwn(data1, key)) {
@@ -15,7 +15,7 @@ const buildDiff = (data1, data2) => {
     if (!Object.hasOwn(data2, key)) {
       return { key, value: data1[key], status: 'deleted' };
     }
-    if (data1[key] !== data2[key]) {
+    if (!_.isEqual(data1[key], data2[key])) {
       return {
         key,
         valueOld: data1[key],
